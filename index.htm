@@ -86,7 +86,7 @@
                     <a href="https://form.auvp.com.br/to/igkk96Hu" target="_blank" class="nav-link font-medium transition-colors text-white/80 hover:text-white relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">Consultoria Individual</a>
                 </div>
                 <div class="flex gap-3 lg:gap-4">
-                    <a id="btn-aluno" href="#" class="inline-flex items-center justify-center px-4 lg:px-6 py-3 font-semibold rounded-none transition-all duration-200 ease-in-out cursor-pointer bg-white text-gray-900 border-2 border-white hover:bg-transparent hover:text-white text-sm lg:text-base group">
+                    <a id="btn-aluno" href="https://auvpagro.com.br/alunos" target="_blank" class="inline-flex items-center justify-center px-4 lg:px-6 py-3 font-semibold rounded-none transition-all duration-200 ease-in-out cursor-pointer bg-white text-gray-900 border-2 border-white hover:bg-transparent hover:text-white text-sm lg:text-base group">
                         Área do Aluno
                         <i class="ph ph-user text-lg ml-2"></i>
                     </a>
@@ -103,7 +103,7 @@
             <a href="#" class="px-5 py-4 text-gray-800 font-medium border-b border-gray-100 hover:bg-[#F6F6F6]">Principal</a>
             <a href="#faq" class="px-5 py-4 text-gray-800 font-medium border-b border-gray-100 hover:bg-[#F6F6F6]">Dúvidas Frequentes</a>
             <a href="https://form.auvp.com.br/to/igkk96Hu" target="_blank" class="px-5 py-4 text-gray-800 font-medium border-b border-gray-100 hover:bg-[#F6F6F6]">Consultoria Individual</a>
-            <a href="#" class="px-5 py-4 text-[#215a3f] font-medium hover:bg-[#F6F6F6] flex items-center">
+            <a href="https://auvpagro.com.br/alunos" target="_blank" class="px-5 py-4 text-[#215a3f] font-medium hover:bg-[#F6F6F6] flex items-center">
                 Área do Aluno
                 <i class="ph ph-user text-lg ml-2"></i>
             </a>
@@ -283,8 +283,8 @@
         </div>
     </section>
 
-    <!-- Depoimentos Section (Fundo: #FFFFFF) -->
-    <section class="py-16 md:py-24 bg-[#FFFFFF] border-t border-gray-200">
+    <!-- Depoimentos Section (Fundo: #F6F6F6) -->
+    <section class="py-16 md:py-24 bg-[#F6F6F6] border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-5 md:px-8">
             <div class="mb-8 md:mb-12 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
@@ -293,19 +293,69 @@
             </div>
             
             <div class="max-w-4xl mx-auto mt-8 md:mt-12">
-                <div class="bg-[#F6F6F6] p-8 md:p-14 rounded-xl shadow-sm border border-gray-200 relative">
-                    <i class="ph-fill ph-quotes text-5xl md:text-6xl text-gray-200 absolute top-6 left-6 md:top-8 md:left-8"></i>
+                <!-- Caixa alterada para bg-white para contrastar com o fundo #F6F6F6 -->
+                <div class="bg-white p-8 md:p-14 rounded-xl shadow-sm border border-gray-200 relative">
+                    <i class="ph-fill ph-quotes text-5xl md:text-6xl text-gray-100 absolute top-6 left-6 md:top-8 md:left-8"></i>
                     <div class="relative z-10 pt-6">
                         <p class="text-lg md:text-2xl text-gray-700 italic leading-relaxed mb-8 md:mb-10 text-center">
                             "Para mim a plataforma da AUVP Agro é muito completa. Como estou no processo de sucessão e como não tenho ainda a visão de mercado bem estabelecida sobre a pecuária, é o lugar certo para aprender. Além disso, mesmo com o acesso apenas à plataforma, o suporte para realizar o hedge é sensacional! ☺️"
                         </p>
                         <div class="flex flex-col items-center justify-center">
-                            <div class="w-16 h-16 bg-white shadow-sm rounded-xl flex items-center justify-center mb-4 text-gray-500 font-bold border border-gray-200">
-                                VB
-                            </div>
                             <h4 class="font-bold text-gray-900 text-lg">Vanessa Barreto</h4>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Análise ao Vivo / Countdown Section (Fundo: #FFFFFF) -->
+    <section class="py-16 md:py-24 bg-[#FFFFFF]">
+        <div class="max-w-7xl mx-auto px-5 md:px-8">
+            <!-- Wrapper principal -->
+            <div class="bg-[#F6F6F6] p-6 md:p-12 lg:p-16 rounded-xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-12 border border-gray-200">
+                
+                <!-- Efeito Blur Escondido atrás dos elementos -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-[#215a3f]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+
+                <div class="relative z-10 w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
+                    
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
+                        A próxima análise ao vivo começa em...
+                    </h2>
+                    
+                    <p class="text-gray-600 text-base md:text-lg mb-8 leading-relaxed max-w-md">
+                        O cronômetro abaixo indica o tempo exato para você começar a sua jornada. Não perca esta oportunidade.
+                    </p>
+
+                    <!-- Countdown Boxes baseadas na referência -->
+                    <div class="flex flex-wrap sm:flex-nowrap gap-3 sm:gap-4 w-full justify-center lg:justify-start">
+                        <!-- Dias -->
+                        <div class="bg-white rounded-xl p-4 sm:p-5 w-[85px] sm:w-28 shadow-sm border border-gray-100 flex flex-col items-center justify-center">
+                            <span id="cd-days" class="font-bold text-4xl sm:text-5xl text-gray-900 leading-none mb-2">00</span>
+                            <span class="text-[9px] sm:text-xs font-bold uppercase tracking-widest text-[#215a3f]">Dias</span>
+                        </div>
+                        <!-- Horas -->
+                        <div class="bg-white rounded-xl p-4 sm:p-5 w-[85px] sm:w-28 shadow-sm border border-gray-100 flex flex-col items-center justify-center">
+                            <span id="cd-hours" class="font-bold text-4xl sm:text-5xl text-gray-900 leading-none mb-2">00</span>
+                            <span class="text-[9px] sm:text-xs font-bold uppercase tracking-widest text-[#215a3f]">Horas</span>
+                        </div>
+                        <!-- Minutos -->
+                        <div class="bg-white rounded-xl p-4 sm:p-5 w-[85px] sm:w-28 shadow-sm border border-gray-100 flex flex-col items-center justify-center">
+                            <span id="cd-minutes" class="font-bold text-4xl sm:text-5xl text-gray-900 leading-none mb-2">00</span>
+                            <span class="text-[9px] sm:text-xs font-bold uppercase tracking-widest text-[#215a3f]">Minutos</span>
+                        </div>
+                        <!-- Segundos -->
+                        <div class="bg-white rounded-xl p-4 sm:p-5 w-[85px] sm:w-28 shadow-sm border border-gray-100 flex flex-col items-center justify-center">
+                            <span id="cd-seconds" class="font-bold text-4xl sm:text-5xl text-gray-900 leading-none mb-2">00</span>
+                            <span class="text-[9px] sm:text-xs font-bold uppercase tracking-widest text-[#215a3f]">Segundos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oculto em ecrãs pequenos (hidden), aparece apenas em large (lg:flex) -->
+                <div class="relative z-10 hidden lg:flex w-1/2 justify-center lg:justify-end">
+                    <img src="https://raw.githubusercontent.com/design-auvp/agro/main/notebook.webp" alt="Sistema AUVP Agro no Notebook" class="w-full max-w-xl object-contain drop-shadow-xl scale-110 lg:translate-x-8">
                 </div>
             </div>
         </div>
@@ -461,8 +511,41 @@
         </a>
     </div>
 
-    <!-- Lógica JavaScript para Menu e FAQ -->
+    <!-- Lógica JavaScript para Menu, FAQ e Contador -->
     <script>
+        // --- Lógica do Contador Regressivo ---
+        function getNextLiveDate() {
+            // Define o alvo para amanhã às 18:30 (6:30 PM)
+            const now = new Date();
+            const targetDate = new Date(now);
+            targetDate.setDate(targetDate.getDate() + 1);
+            targetDate.setHours(18, 30, 0, 0);
+            return targetDate.getTime();
+        }
+
+        const targetTime = getNextLiveDate();
+
+        function updateCountdown() {
+            const nowTime = new Date().getTime();
+            const diff = targetTime - nowTime;
+
+            if (diff > 0) {
+                document.getElementById("cd-days").textContent = String(Math.floor(diff / 86400000)).padStart(2, "0");
+                document.getElementById("cd-hours").textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, "0");
+                document.getElementById("cd-minutes").textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, "0");
+                document.getElementById("cd-seconds").textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, "0");
+            } else {
+                // Se o tempo acabar, zera o contador
+                document.getElementById("cd-days").textContent = "00";
+                document.getElementById("cd-hours").textContent = "00";
+                document.getElementById("cd-minutes").textContent = "00";
+                document.getElementById("cd-seconds").textContent = "00";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Chamada inicial para evitar delay de 1 segundo
+
         // --- Lógica do Menu (Navbar) ---
         const nav = document.getElementById('navbar');
         const logoImg = document.getElementById('logo-img');
