@@ -129,7 +129,7 @@
                     Tenha o conhecimento para fazer o seguro de preço de soja, milho e boi.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4 w-full">
-                    <a href="https://form.auvp.com.br/to/igkk96Hu" target="_blank" class="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-none transition-colors duration-200 ease-in-out cursor-pointer bg-[#16a34a] text-white hover:bg-[#15803d] w-full sm:w-auto">
+                    <a href="https://form.auvp.com.br/to/igkk96Hu" target="_blank" class="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-none transition-all duration-300 ease-in-out cursor-pointer bg-[#16a34a] text-white hover:bg-[#15803d] hover:-translate-y-1 shadow-[0_0_15px_rgba(22,163,74,0.4)] hover:shadow-[0_0_25px_rgba(22,163,74,0.7)] w-full sm:w-auto">
                         Fale com um consultor
                         <i class="ph ph-arrow-right ml-2 text-xl"></i>
                     </a>
@@ -278,6 +278,13 @@
                     <p class="font-medium text-white mt-6 md:mt-10">
                         Com as ferramentas, a recomendação e a execução da AUVP Escola Agro, você vai aprender a assumir o controle dessa engrenagem.
                     </p>
+                    
+                    <div class="mt-10 md:mt-12 flex justify-center w-full">
+                        <a href="https://form.auvp.com.br/to/igkk96Hu" target="_blank" class="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 font-semibold rounded-none transition-all duration-300 ease-in-out cursor-pointer bg-[#16a34a] text-white hover:bg-[#15803d] hover:-translate-y-1 shadow-[0_0_15px_rgba(22,163,74,0.4)] hover:shadow-[0_0_25px_rgba(22,163,74,0.7)] w-full sm:w-auto">
+                            Fale com um consultor
+                            <i class="ph ph-arrow-right ml-2 text-xl"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -515,11 +522,21 @@
     <script>
         // --- Lógica do Contador Regressivo ---
         function getNextLiveDate() {
-            // Define o alvo para amanhã às 18:30 (6:30 PM)
+            // Define o alvo para a próxima quarta-feira às 19:00 (Horário de Brasília / UTC-3)
+            // 19:00 BRT equivale a 22:00 UTC
             const now = new Date();
             const targetDate = new Date(now);
-            targetDate.setDate(targetDate.getDate() + 1);
-            targetDate.setHours(18, 30, 0, 0);
+            targetDate.setUTCHours(22, 0, 0, 0);
+
+            // 0 = Domingo, 1 = Segunda, 2 = Terça, 3 = Quarta (Wed)
+            let daysUntilWednesday = (3 - targetDate.getUTCDay() + 7) % 7;
+            
+            // Se hoje for quarta-feira mas já passou das 19:00 BRT (22:00 UTC), o alvo é a próxima quarta
+            if (daysUntilWednesday === 0 && now.getTime() > targetDate.getTime()) {
+                daysUntilWednesday = 7;
+            }
+            
+            targetDate.setUTCDate(targetDate.getUTCDate() + daysUntilWednesday);
             return targetDate.getTime();
         }
 
