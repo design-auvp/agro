@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AUVP Agro | Seguro de Preço</title>
     
+    <!-- Schema Markup para SEO e Autoridade do Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "AUVP Agro",
+      "legalName": "AUVP CONSULTORIA FINANCEIRA DE INVESTIMENTOS LTDA",
+      "url": "https://auvpagro.com.br",
+      "logo": "https://raw.githubusercontent.com/design-auvp/agro/main/AUVP%20AGRO%20-%20HORIZONTAL%20PRETA.svg",
+      "sameAs": [
+        "https://www.youtube.com/@AUVPagro",
+        "https://www.instagram.com/auvpagro/#",
+        "https://comunidade.auvp.com.br/"
+      ],
+      "taxID": "49.479.036/0001-99",
+      "description": "Aprenda a vender com estratégia. Tenha o conhecimento para fazer o seguro de preço de soja, milho e boi."
+    }
+    </script>
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -17,6 +36,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
         }
         /* Garantindo que o comportamento de scroll seja suave para os links âncora */
         html {
@@ -49,7 +69,6 @@
             flex-direction: column;
             align-items: flex-end;
             pointer-events: none;
-            /* Alterado de 10s para 1.5s para uma entrada mais ágil mantendo a mesma curva de animação */
             animation: slideUpEntrance 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
         }
 
@@ -69,18 +88,18 @@
         }
     </style>
 </head>
-<body class="text-gray-600 bg-[#FFFFFF] min-h-screen">
+<body class="text-gray-600 bg-[#FFFFFF] min-h-screen antialiased selection:bg-[#215a3f] selection:text-white">
 
     <!-- Navbar -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4 md:py-5">
         <div class="max-w-7xl mx-auto px-5 md:px-8 flex justify-between items-center relative">
             <div class="flex items-center gap-2">
-                <img id="logo-img" src="https://raw.githubusercontent.com/design-auvp/agro/main/AUVP%20AGRO%20-%20HORIZONTAL%20BRANCA.svg" alt="AUVP Agro" class="h-10 md:h-12 w-auto transition-all duration-300">
+                <img id="logo-img" src="https://raw.githubusercontent.com/design-auvp/agro/main/AUVP%20AGRO%20-%20HORIZONTAL%20BRANCA.svg" alt="AUVP Agro" class="h-8 sm:h-10 md:h-12 w-auto transition-all duration-300">
             </div>
             
             <!-- Grupo Direita: Links e Botões agrupados para ficarem próximos -->
-            <div class="hidden md:flex items-center gap-8 lg:gap-12">
-                <div class="flex items-center space-x-6 lg:space-x-8">
+            <div class="hidden md:flex items-center gap-6 lg:gap-12">
+                <div class="flex items-center space-x-4 lg:space-x-8">
                     <a href="#" class="nav-link font-medium transition-colors text-white/80 hover:text-white relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">Principal</a>
                     <a href="#faq" class="nav-link font-medium transition-colors text-white/80 hover:text-white relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">Dúvidas Frequentes</a>
                     <a href="https://form.auvp.com.br/to/igkk96Hu" target="_blank" class="nav-link font-medium transition-colors text-white/80 hover:text-white relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">Consultoria Individual</a>
@@ -99,7 +118,7 @@
         </div>
 
         <!-- Menu Mobile -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl absolute top-full left-0 w-full flex flex-col border-t border-gray-100 z-10 transition-all duration-300 origin-top">
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl absolute top-full left-0 w-full flex flex-col border-t border-gray-100 z-10 transition-all duration-300 origin-top max-h-[calc(100vh-70px)] overflow-y-auto">
             <a href="#" class="px-5 py-4 text-gray-800 font-medium border-b border-gray-100 hover:bg-[#F6F6F6]">Principal</a>
             <a href="#faq" class="px-5 py-4 text-gray-800 font-medium border-b border-gray-100 hover:bg-[#F6F6F6]">Dúvidas Frequentes</a>
             <a href="https://form.auvp.com.br/to/igkk96Hu" target="_blank" class="px-5 py-4 text-gray-800 font-medium border-b border-gray-100 hover:bg-[#F6F6F6]">Consultoria Individual</a>
@@ -111,25 +130,25 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden">
+    <section class="relative pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden flex items-center min-h-[85vh] md:min-h-0">
         <div class="absolute inset-0 z-0 bg-black">
-            <img src="https://raw.githubusercontent.com/design-auvp/agro/main/hero.jpeg" alt="Seguro de preço no agronegócio" class="w-full h-full object-cover opacity-50">
+            <img src="https://raw.githubusercontent.com/design-auvp/agro/main/hero.jpeg" alt="Seguro de preço no agronegócio" class="w-full h-full object-cover object-center opacity-50">
             <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/40"></div>
         </div>
         
-        <div class="max-w-7xl mx-auto px-5 md:px-8 relative z-10 flex flex-col items-center">
+        <div class="max-w-7xl mx-auto px-5 md:px-8 relative z-10 flex flex-col items-center w-full">
             <div class="max-w-3xl text-center flex flex-col items-center">
-                <span class="inline-block py-1 px-3 rounded-xl bg-white/10 text-white border border-white/20 text-sm font-semibold tracking-wider mb-4">
+                <span class="inline-block py-1.5 px-4 rounded-xl bg-white/10 text-white border border-white/20 text-xs sm:text-sm font-semibold tracking-wider mb-4 md:mb-6">
                     Seguro de preço no agronegócio
                 </span>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 md:mb-6">
                     Aprenda a vender com estratégia.
                 </h1>
-                <p class="text-xl text-gray-200 mb-8 font-light">
+                <p class="text-base sm:text-xl text-gray-200 mb-8 md:mb-10 font-light px-2">
                     Tenha o conhecimento para fazer o seguro de preço de soja, milho e boi.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4 w-full">
-                    <a href="https://form.auvp.com.br/to/igkk96Hu" target="_blank" class="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-none transition-all duration-300 ease-in-out cursor-pointer bg-[#16a34a] text-white hover:bg-[#15803d] hover:-translate-y-1 shadow-[0_0_15px_rgba(22,163,74,0.4)] hover:shadow-[0_0_25px_rgba(22,163,74,0.7)] w-full sm:w-auto">
+                <div class="flex flex-col sm:flex-row justify-center gap-4 w-full px-4 sm:px-0">
+                    <a href="https://form.auvp.com.br/to/igkk96Hu" target="_blank" class="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 font-semibold rounded-none transition-all duration-300 ease-in-out cursor-pointer bg-[#16a34a] text-white hover:bg-[#15803d] hover:-translate-y-1 shadow-[0_0_15px_rgba(22,163,74,0.4)] hover:shadow-[0_0_25px_rgba(22,163,74,0.7)] w-full sm:w-auto">
                         Fale com um consultor
                         <i class="ph ph-arrow-right ml-2 text-xl"></i>
                     </a>
@@ -142,28 +161,30 @@
     <section id="sobre" class="py-16 md:py-24 bg-[#FFFFFF]">
         <div class="max-w-7xl mx-auto px-5 md:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
-                <div class="relative">
-                    <img src="https://raw.githubusercontent.com/design-auvp/agro/main/sobre%20a%20auvp.jpeg" alt="Sobre a AUVP Agro" class="w-full h-72 md:h-[500px] object-cover rounded-xl shadow-lg border border-gray-200">
+                <div class="relative px-2 sm:px-0">
+                    <img src="https://raw.githubusercontent.com/design-auvp/agro/main/sobre%20a%20auvp.jpeg" alt="Sobre a AUVP Agro" class="w-full h-64 sm:h-72 md:h-[500px] object-cover rounded-xl shadow-lg border border-gray-200">
                     
-                    <div class="absolute -bottom-8 -right-8 bg-[#215a3f] p-8 rounded-xl shadow-lg hidden md:block max-w-xs text-white">
-                        <i class="ph ph-trend-up text-4xl mb-3"></i>
-                        <h4 class="text-xl font-bold mb-2">Top 1 BTG Pactual</h4>
-                        <p class="text-gray-200 text-sm">Consultoria financeira Top 1 do BTG Pactual desde 2024 até hoje.</p>
+                    <div class="absolute -bottom-6 -right-4 sm:-bottom-8 sm:-right-8 bg-[#215a3f] p-6 sm:p-8 rounded-xl shadow-lg hidden sm:block max-w-[260px] sm:max-w-xs text-white">
+                        <i class="ph ph-trend-up text-3xl sm:text-4xl mb-3"></i>
+                        <h4 class="text-lg sm:text-xl font-bold mb-2">Top 1 BTG Pactual</h4>
+                        <p class="text-gray-200 text-xs sm:text-sm">Consultoria financeira Top 1 do BTG Pactual desde 2024 até hoje.</p>
                     </div>
                 </div>
                 
                 <div>
-                    <div class="mb-8 md:mb-12">
+                    <div class="mb-6 md:mb-10 text-center lg:text-left">
                         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
                             Sobre a AUVP Agro
                         </h2>
                     </div>
-                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        A AUVP Agro nasce com o DNA da AUVP Capital, eleita a consultoria financeira Top 1 do BTG Pactual desde 2024 até hoje. Só pra você ter uma noção, já ensinamos mais de 50 mil pessoas a investirem do zero com independência total.
-                    </p>
-                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        Agora, trouxemos esse conhecimento para o campo. Nossa missão é formar produtores em comercializadores que não ficam reféns da queda do preço da soja, milho e boi.
-                    </p>
+                    <div class="text-base sm:text-lg text-gray-600 space-y-6 leading-relaxed text-center lg:text-left">
+                        <p>
+                            A AUVP Agro nasce com o DNA da AUVP Capital, eleita a consultoria financeira Top 1 do BTG Pactual desde 2024 até hoje. Só pra você ter uma noção, já ensinamos mais de 50 mil pessoas a investirem do zero com independência total.
+                        </p>
+                        <p>
+                            Agora, trouxemos esse conhecimento para o campo. Nossa missão é formar produtores em comercializadores que não ficam reféns da queda do preço da soja, milho e boi.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -173,46 +194,46 @@
     <section id="pilares" class="py-16 md:py-24 bg-[#F6F6F6] border-t border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-5 md:px-8">
             <div class="max-w-3xl mx-auto text-center mb-12 md:mb-16">
-                <div class="mb-8 md:mb-12 text-center">
-                    <span class="text-[#215a3f] font-semibold tracking-wider uppercase text-sm mb-2 block">O que você vai encontrar na AUVP Agro</span>
+                <div class="mb-6 md:mb-10 text-center">
+                    <span class="text-[#215a3f] font-semibold tracking-wider uppercase text-xs sm:text-sm mb-2 sm:mb-3 block">O que você vai encontrar na AUVP Agro</span>
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
                         Não adianta saber na teoria, tem que conseguir fazer o hedge!
                     </h2>
                 </div>
-                <p class="text-lg text-gray-600">
+                <p class="text-base sm:text-lg text-gray-600 px-2 sm:px-0">
                     Além do conhecimento para entender a fundo como funciona o Hedge, você também tem recomendações diretas sobre compra e venda e acesso a ferramentas para acompanhar e analisar o mercado de exportação, importação, clima e produção. E no final, você consegue executar o hedge diretamente no aplicativo.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                 <!-- Card 1 -->
-                <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-[#F6F6F6] rounded-xl flex items-center justify-center text-[#215a3f] mb-5 md:mb-6 transition-colors">
-                        <i class="ph ph-book-open-text text-4xl"></i>
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-200 flex flex-col items-center text-center">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 bg-[#F6F6F6] rounded-xl flex items-center justify-center text-[#215a3f] mb-5 transition-colors">
+                        <i class="ph ph-book-open-text text-3xl sm:text-4xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Conhecimento</h3>
                     <p class="text-gray-500 text-sm leading-relaxed">O treinamento é completo com o passo a passo definitivo para você entender como o mercado funciona na prática, com mais de 80 aulas detalhadas.</p>
                 </div>
                 <!-- Card 2 -->
-                <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-[#F6F6F6] rounded-xl flex items-center justify-center text-[#215a3f] mb-5 md:mb-6 transition-colors">
-                        <i class="ph ph-wrench text-4xl"></i>
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-200 flex flex-col items-center text-center">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 bg-[#F6F6F6] rounded-xl flex items-center justify-center text-[#215a3f] mb-5 transition-colors">
+                        <i class="ph ph-wrench text-3xl sm:text-4xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Ferramentas</h3>
                     <p class="text-gray-500 text-sm leading-relaxed">Depois de entender a fundo como funciona, você consegue acompanhar o mercado. Você terá acesso a diversas ferramentas de cotações, calculadoras de preço, relatórios de produção e escalas de abate, clima e muito mais.</p>
                 </div>
                 <!-- Card 3 -->
-                <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-[#F6F6F6] rounded-xl flex items-center justify-center text-[#215a3f] mb-5 md:mb-6 transition-colors">
-                        <i class="ph ph-chart-line-up text-4xl"></i>
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-200 flex flex-col items-center text-center">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 bg-[#F6F6F6] rounded-xl flex items-center justify-center text-[#215a3f] mb-5 transition-colors">
+                        <i class="ph ph-chart-line-up text-3xl sm:text-4xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Recomendações</h3>
                     <p class="text-gray-500 text-sm leading-relaxed">Você não fica na mão depois de aprender tudo, você continua acompanhando o mercado ao vivo conosco. Teremos lives semanais para tirar dúvidas e recomendações diretas de compra ou venda.</p>
                 </div>
                 <!-- Card 4 -->
-                <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-[#F6F6F6] rounded-xl flex items-center justify-center text-[#215a3f] mb-5 md:mb-6 transition-colors">
-                        <i class="ph ph-target text-4xl"></i>
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-200 flex flex-col items-center text-center">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 bg-[#F6F6F6] rounded-xl flex items-center justify-center text-[#215a3f] mb-5 transition-colors">
+                        <i class="ph ph-target text-3xl sm:text-4xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Execução</h3>
                     <p class="text-gray-500 text-sm leading-relaxed">Você não vai estar sozinho na hora de executar o seu seguro de preço, você vai ter acesso ao sistema da AUVP para operar junto conosco via BTG Pactual (o maior banco de investimentos da América Latina).</p>
@@ -224,14 +245,14 @@
     <!-- Garantia Section (Fundo: #FFFFFF com imagem do selo) -->
     <section class="py-16 md:py-24 bg-[#FFFFFF] relative overflow-hidden border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-5 md:px-8 relative z-10">
-            <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 text-center md:text-left">
-                <img src="https://raw.githubusercontent.com/design-auvp/agro/main/garantia%20auvp.png" alt="Selo de Garantia 100% AUVP" class="w-48 md:w-56 shrink-0 drop-shadow-md">
+            <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-center md:text-left">
+                <img src="https://raw.githubusercontent.com/design-auvp/agro/main/garantia%20auvp.png" alt="Selo de Garantia 100% AUVP" class="w-40 md:w-56 shrink-0 drop-shadow-md">
                 
-                <div class="flex flex-col justify-center">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-gray-900 leading-tight">
+                <div class="flex flex-col justify-center px-4 sm:px-0">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-3 md:mb-6 text-gray-900 leading-tight">
                         Garantia 100% AUVP
                     </h2>
-                    <p class="text-lg text-gray-600 leading-relaxed">
+                    <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
                         Aprendizado garantido! Se você concluir todas as aulas, emitir seu certificado e não se sentir seguro para fazer hedge, nós devolvemos o seu dinheiro.
                     </p>
                 </div>
@@ -241,46 +262,43 @@
 
     <!-- Por Que Hedge Section (Fundo com Imagem) -->
     <section class="py-20 md:py-32 relative overflow-hidden">
-        <!-- Imagem de Fundo e Overlay Escuro -->
+        <!-- Imagem de Fundo e Overlay Escuro com Gradiente (Vignette) -->
         <div class="absolute inset-0 z-0 bg-black">
-            <!-- Substitua o link do Unsplash pela imagem que desejar -->
             <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?q=80&w=2069&auto=format&fit=crop" alt="Cenário do Agronegócio" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/85"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/95 via-black/80 to-black/95"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-5 md:px-8 relative z-10 flex flex-col items-center">
             <div class="max-w-4xl text-center flex flex-col items-center">
-                <div class="mb-10 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white leading-tight">
-                        Por que você precisa adquirir o <br class="hidden md:block">conhecimento de Hedge?
+                <div class="mb-10 md:mb-14">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white leading-tight">
+                        Por que você precisa entender de Hedge?
                     </h2>
                 </div>
                 
-                <div class="space-y-6 text-gray-200 text-lg leading-relaxed text-center">
-                    <p>
-                        Durante muito tempo, produzir bem era o suficiente para garantir a sobrevivência na fazenda. Mas os números mostram que os tempos mudaram.
-                    </p>
-                    <p>
-                        Em 2025, vivemos o recorde de recuperações judiciais no agronegócio. E o mais impressionante é que o problema não foi a nossa produtividade. Para a safra de 25/26, a produção estimada era de 181 milhões de toneladas de soja. No mesmo período, nos consolidamos como o maior produtor de carne bovina do planeta.
-                    </p>
+                <div class="space-y-6 text-gray-300 text-lg md:text-xl font-light leading-relaxed text-center px-2 sm:px-0">
                     
-                    <!-- Caixa de destaque adaptada para fundo escuro e alinhamento central -->
+                    <!-- Caixa de destaque adaptada para fundo escuro com estilo anterior -->
                     <div class="p-6 md:p-8 bg-white/10 backdrop-blur-sm border-t-4 border-[#25D366] rounded-xl shadow-lg my-8 w-full mx-auto">
-                        <p class="font-semibold text-white">
-                            Então, como pode um país que bate recordes de produção ter tantos fazendeiros quebrados? <br/>
-                            <span class="text-[#25D366] text-xl md:text-2xl font-bold block mt-3">A resposta é clara: PREÇO.</span>
-                        </p>
+                        <span class="text-[#25D366] text-2xl sm:text-3xl md:text-4xl font-bold block tracking-wide uppercase drop-shadow-md">
+                            A resposta é clara: PREÇO.
+                        </span>
                     </div>
                     
                     <p>
-                        Somos o país que mais produz no mundo, mas na hora de vender, a conta de muitos não fecha. A segurança não vem de controlar o clima, mas de controlar o preço através do conhecimento.
-                    </p>
-                    <p class="font-medium text-white mt-6 md:mt-10">
-                        Com as ferramentas, a recomendação e a execução da AUVP Escola Agro, você vai aprender a assumir o controle dessa engrenagem.
+                        Produzir já não é o suficiente para sobreviver no campo. Na safra 25/26, batemos recordes de produção, mas ainda assim vemos muitos fazendeiros quebrados.
                     </p>
                     
-                    <div class="mt-10 md:mt-12 flex justify-center w-full">
-                        <a href="https://form.auvp.com.br/to/igkk96Hu" target="_blank" class="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 font-semibold rounded-none transition-all duration-300 ease-in-out cursor-pointer bg-[#16a34a] text-white hover:bg-[#15803d] hover:-translate-y-1 shadow-[0_0_15px_rgba(22,163,74,0.4)] hover:shadow-[0_0_25px_rgba(22,163,74,0.7)] w-full sm:w-auto">
+                    <p>
+                        A segurança não vem de tentar controlar o clima, mas de controlar o preço através do conhecimento.
+                    </p>
+                    
+                    <p class="font-medium text-white text-xl md:text-2xl mt-8">
+                        Com a AUVP Escola Agro, você vai aprender a assumir o controle dessa engrenagem.
+                    </p>
+                    
+                    <div class="mt-12 md:mt-16 flex justify-center w-full">
+                        <a href="https://form.auvp.com.br/to/igkk96Hu" target="_blank" class="inline-flex items-center justify-center px-8 py-4 font-semibold rounded-none transition-all duration-300 ease-in-out cursor-pointer bg-[#16a34a] text-white hover:bg-[#15803d] hover:-translate-y-1 shadow-[0_0_15px_rgba(22,163,74,0.4)] hover:shadow-[0_0_25px_rgba(22,163,74,0.7)] w-full sm:w-auto">
                             Fale com um consultor
                             <i class="ph ph-arrow-right ml-2 text-xl"></i>
                         </a>
@@ -300,15 +318,14 @@
             </div>
             
             <div class="max-w-4xl mx-auto mt-8 md:mt-12">
-                <!-- Caixa alterada para bg-white para contrastar com o fundo #F6F6F6 -->
-                <div class="bg-white p-8 md:p-14 rounded-xl shadow-sm border border-gray-200 relative">
-                    <i class="ph-fill ph-quotes text-5xl md:text-6xl text-gray-100 absolute top-6 left-6 md:top-8 md:left-8"></i>
+                <div class="bg-white p-6 sm:p-10 md:p-14 rounded-xl shadow-sm border border-gray-200 relative">
+                    <i class="ph-fill ph-quotes text-5xl md:text-6xl text-gray-100 absolute top-4 left-4 md:top-8 md:left-8"></i>
                     <div class="relative z-10 pt-6">
-                        <p class="text-lg md:text-2xl text-gray-700 italic leading-relaxed mb-8 md:mb-10 text-center">
+                        <p class="text-base sm:text-lg md:text-2xl text-gray-700 italic leading-relaxed mb-6 md:mb-10 text-center px-2">
                             "Para mim a plataforma da AUVP Agro é muito completa. Como estou no processo de sucessão e como não tenho ainda a visão de mercado bem estabelecida sobre a pecuária, é o lugar certo para aprender. Além disso, mesmo com o acesso apenas à plataforma, o suporte para realizar o hedge é sensacional! ☺️"
                         </p>
                         <div class="flex flex-col items-center justify-center">
-                            <h4 class="font-bold text-gray-900 text-lg">Vanessa Barreto</h4>
+                            <h4 class="font-bold text-gray-900 text-base md:text-lg">Vanessa Barreto</h4>
                         </div>
                     </div>
                 </div>
@@ -320,42 +337,42 @@
     <section class="py-16 md:py-24 bg-[#FFFFFF]">
         <div class="max-w-7xl mx-auto px-5 md:px-8">
             <!-- Wrapper principal -->
-            <div class="bg-[#F6F6F6] p-6 md:p-12 lg:p-16 rounded-xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-12 border border-gray-200">
+            <div class="bg-[#F6F6F6] p-6 sm:p-8 md:p-12 lg:p-16 rounded-xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-12 border border-gray-200">
                 
                 <!-- Efeito Blur Escondido atrás dos elementos -->
                 <div class="absolute top-0 right-0 w-64 h-64 bg-[#215a3f]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 
                 <div class="relative z-10 w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
                     
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
                         A próxima análise ao vivo começa em...
                     </h2>
                     
-                    <p class="text-gray-600 text-base md:text-lg mb-8 leading-relaxed max-w-md">
+                    <p class="text-gray-600 text-sm sm:text-base md:text-lg mb-8 leading-relaxed max-w-md">
                         O cronômetro abaixo indica o tempo exato para você começar a sua jornada. Não perca esta oportunidade.
                     </p>
 
-                    <!-- Countdown Boxes baseadas na referência -->
-                    <div class="flex flex-wrap sm:flex-nowrap gap-3 sm:gap-4 w-full justify-center lg:justify-start">
+                    <!-- Countdown Boxes com Grelha 2x2 no mobile para não quebrar layout -->
+                    <div class="grid grid-cols-2 sm:flex sm:flex-nowrap gap-3 sm:gap-4 w-full sm:w-auto justify-center lg:justify-start max-w-xs sm:max-w-none mx-auto lg:mx-0">
                         <!-- Dias -->
-                        <div class="bg-white rounded-xl p-4 sm:p-5 w-[85px] sm:w-28 shadow-sm border border-gray-100 flex flex-col items-center justify-center">
-                            <span id="cd-days" class="font-bold text-4xl sm:text-5xl text-gray-900 leading-none mb-2">00</span>
+                        <div class="bg-white rounded-xl p-3 sm:p-4 md:p-5 w-full sm:w-28 shadow-sm border border-gray-100 flex flex-col items-center justify-center">
+                            <span id="cd-days" class="font-bold text-3xl min-[400px]:text-4xl sm:text-5xl text-gray-900 leading-none mb-1 sm:mb-2">00</span>
                             <span class="text-[9px] sm:text-xs font-bold uppercase tracking-widest text-[#215a3f]">Dias</span>
                         </div>
                         <!-- Horas -->
-                        <div class="bg-white rounded-xl p-4 sm:p-5 w-[85px] sm:w-28 shadow-sm border border-gray-100 flex flex-col items-center justify-center">
-                            <span id="cd-hours" class="font-bold text-4xl sm:text-5xl text-gray-900 leading-none mb-2">00</span>
+                        <div class="bg-white rounded-xl p-3 sm:p-4 md:p-5 w-full sm:w-28 shadow-sm border border-gray-100 flex flex-col items-center justify-center">
+                            <span id="cd-hours" class="font-bold text-3xl min-[400px]:text-4xl sm:text-5xl text-gray-900 leading-none mb-1 sm:mb-2">00</span>
                             <span class="text-[9px] sm:text-xs font-bold uppercase tracking-widest text-[#215a3f]">Horas</span>
                         </div>
                         <!-- Minutos -->
-                        <div class="bg-white rounded-xl p-4 sm:p-5 w-[85px] sm:w-28 shadow-sm border border-gray-100 flex flex-col items-center justify-center">
-                            <span id="cd-minutes" class="font-bold text-4xl sm:text-5xl text-gray-900 leading-none mb-2">00</span>
-                            <span class="text-[9px] sm:text-xs font-bold uppercase tracking-widest text-[#215a3f]">Minutos</span>
+                        <div class="bg-white rounded-xl p-3 sm:p-4 md:p-5 w-full sm:w-28 shadow-sm border border-gray-100 flex flex-col items-center justify-center">
+                            <span id="cd-minutes" class="font-bold text-3xl min-[400px]:text-4xl sm:text-5xl text-gray-900 leading-none mb-1 sm:mb-2">00</span>
+                            <span class="text-[9px] sm:text-xs font-bold uppercase tracking-widest text-[#215a3f]">Min</span>
                         </div>
                         <!-- Segundos -->
-                        <div class="bg-white rounded-xl p-4 sm:p-5 w-[85px] sm:w-28 shadow-sm border border-gray-100 flex flex-col items-center justify-center">
-                            <span id="cd-seconds" class="font-bold text-4xl sm:text-5xl text-gray-900 leading-none mb-2">00</span>
-                            <span class="text-[9px] sm:text-xs font-bold uppercase tracking-widest text-[#215a3f]">Segundos</span>
+                        <div class="bg-white rounded-xl p-3 sm:p-4 md:p-5 w-full sm:w-28 shadow-sm border border-gray-100 flex flex-col items-center justify-center">
+                            <span id="cd-seconds" class="font-bold text-3xl min-[400px]:text-4xl sm:text-5xl text-gray-900 leading-none mb-1 sm:mb-2">00</span>
+                            <span class="text-[9px] sm:text-xs font-bold uppercase tracking-widest text-[#215a3f]">Seg</span>
                         </div>
                     </div>
                 </div>
@@ -379,69 +396,64 @@
                 </div>
                 
                 <div class="mt-8 md:mt-12 space-y-3 md:space-y-4">
-                    
-                    <!-- FAQ Item 0 -->
+                    <!-- FAQ Items -->
                     <div class="border border-gray-200 rounded-xl overflow-hidden transition-all duration-200 bg-white shadow-sm">
-                        <button class="w-full px-5 py-4 md:px-6 md:py-5 text-left flex justify-between items-center bg-white hover:bg-[#F6F6F6] focus:outline-none" onclick="toggleFaq(0)">
-                            <span class="font-semibold text-gray-900 text-base md:text-lg">Quanto tempo duram as aulas?</span>
-                            <div id="faq-icon-bg-0" class="w-8 h-8 rounded-xl flex items-center justify-center transition-colors bg-[#F6F6F6] text-gray-500 shrink-0 ml-4">
-                                <i id="faq-icon-0" class="ph ph-plus text-lg"></i>
+                        <button class="w-full px-4 sm:px-5 py-4 md:px-6 md:py-5 text-left flex justify-between items-center bg-white hover:bg-[#F6F6F6] focus:outline-none" onclick="toggleFaq(0)">
+                            <span class="font-semibold text-gray-900 text-sm sm:text-base md:text-lg">Quanto tempo duram as aulas?</span>
+                            <div id="faq-icon-bg-0" class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl flex items-center justify-center transition-colors bg-[#F6F6F6] text-gray-500 shrink-0 ml-4">
+                                <i id="faq-icon-0" class="ph ph-plus text-base sm:text-lg"></i>
                             </div>
                         </button>
-                        <div id="faq-content-0" class="hidden px-5 py-4 md:px-6 md:py-5 bg-white text-gray-600 border-t border-gray-100">
-                            <p class="leading-relaxed text-sm md:text-base">As aulas são objetivas, com média de 10 minutos, focadas no que realmente importa para o seu resultado.</p>
+                        <div id="faq-content-0" class="hidden px-4 sm:px-5 py-4 md:px-6 md:py-5 bg-white text-gray-600 border-t border-gray-100">
+                            <p class="leading-relaxed text-xs sm:text-sm md:text-base">As aulas são objetivas, com média de 10 minutos, focadas no que realmente importa para o seu resultado.</p>
                         </div>
                     </div>
 
-                    <!-- FAQ Item 1 -->
                     <div class="border border-gray-200 rounded-xl overflow-hidden transition-all duration-200 bg-white shadow-sm">
-                        <button class="w-full px-5 py-4 md:px-6 md:py-5 text-left flex justify-between items-center bg-white hover:bg-[#F6F6F6] focus:outline-none" onclick="toggleFaq(1)">
-                            <span class="font-semibold text-gray-900 text-base md:text-lg">As aulas são online?</span>
-                            <div id="faq-icon-bg-1" class="w-8 h-8 rounded-xl flex items-center justify-center transition-colors bg-[#F6F6F6] text-gray-500 shrink-0 ml-4">
-                                <i id="faq-icon-1" class="ph ph-plus text-lg"></i>
+                        <button class="w-full px-4 sm:px-5 py-4 md:px-6 md:py-5 text-left flex justify-between items-center bg-white hover:bg-[#F6F6F6] focus:outline-none" onclick="toggleFaq(1)">
+                            <span class="font-semibold text-gray-900 text-sm sm:text-base md:text-lg">As aulas são online?</span>
+                            <div id="faq-icon-bg-1" class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl flex items-center justify-center transition-colors bg-[#F6F6F6] text-gray-500 shrink-0 ml-4">
+                                <i id="faq-icon-1" class="ph ph-plus text-base sm:text-lg"></i>
                             </div>
                         </button>
-                        <div id="faq-content-1" class="hidden px-5 py-4 md:px-6 md:py-5 bg-white text-gray-600 border-t border-gray-100">
-                            <p class="leading-relaxed text-sm md:text-base">Sim, todo o treinamento e as ferramentas são acessados de forma 100% online pela nossa plataforma.</p>
+                        <div id="faq-content-1" class="hidden px-4 sm:px-5 py-4 md:px-6 md:py-5 bg-white text-gray-600 border-t border-gray-100">
+                            <p class="leading-relaxed text-xs sm:text-sm md:text-base">Sim, todo o treinamento e as ferramentas são acessados de forma 100% online pela nossa plataforma.</p>
                         </div>
                     </div>
 
-                    <!-- FAQ Item 2 -->
                     <div class="border border-gray-200 rounded-xl overflow-hidden transition-all duration-200 bg-white shadow-sm">
-                        <button class="w-full px-5 py-4 md:px-6 md:py-5 text-left flex justify-between items-center bg-white hover:bg-[#F6F6F6] focus:outline-none" onclick="toggleFaq(2)">
-                            <span class="font-semibold text-gray-900 text-base md:text-lg">Eu não entendo de finanças, vou conseguir aprender?</span>
-                            <div id="faq-icon-bg-2" class="w-8 h-8 rounded-xl flex items-center justify-center transition-colors bg-[#F6F6F6] text-gray-500 shrink-0 ml-4">
-                                <i id="faq-icon-2" class="ph ph-plus text-lg"></i>
+                        <button class="w-full px-4 sm:px-5 py-4 md:px-6 md:py-5 text-left flex justify-between items-center bg-white hover:bg-[#F6F6F6] focus:outline-none" onclick="toggleFaq(2)">
+                            <span class="font-semibold text-gray-900 text-sm sm:text-base md:text-lg">Eu não entendo de finanças, vou conseguir aprender?</span>
+                            <div id="faq-icon-bg-2" class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl flex items-center justify-center transition-colors bg-[#F6F6F6] text-gray-500 shrink-0 ml-4">
+                                <i id="faq-icon-2" class="ph ph-plus text-base sm:text-lg"></i>
                             </div>
                         </button>
-                        <div id="faq-content-2" class="hidden px-5 py-4 md:px-6 md:py-5 bg-white text-gray-600 border-t border-gray-100">
-                            <p class="leading-relaxed text-sm md:text-base">Com certeza. O curso foi desenhado do zero para quem nunca operou no mercado financeiro, trazendo a expertise da AUVP Capital de forma simplificada.</p>
+                        <div id="faq-content-2" class="hidden px-4 sm:px-5 py-4 md:px-6 md:py-5 bg-white text-gray-600 border-t border-gray-100">
+                            <p class="leading-relaxed text-xs sm:text-sm md:text-base">Com certeza. O curso foi desenhado do zero para quem nunca operou no mercado financeiro, trazendo a expertise da AUVP Capital de forma simplificada.</p>
                         </div>
                     </div>
 
-                    <!-- FAQ Item 3 -->
                     <div class="border border-gray-200 rounded-xl overflow-hidden transition-all duration-200 bg-white shadow-sm">
-                        <button class="w-full px-5 py-4 md:px-6 md:py-5 text-left flex justify-between items-center bg-white hover:bg-[#F6F6F6] focus:outline-none" onclick="toggleFaq(3)">
-                            <span class="font-semibold text-gray-900 text-base md:text-lg">O conteúdo é atualizado?</span>
-                            <div id="faq-icon-bg-3" class="w-8 h-8 rounded-xl flex items-center justify-center transition-colors bg-[#F6F6F6] text-gray-500 shrink-0 ml-4">
-                                <i id="faq-icon-3" class="ph ph-plus text-lg"></i>
+                        <button class="w-full px-4 sm:px-5 py-4 md:px-6 md:py-5 text-left flex justify-between items-center bg-white hover:bg-[#F6F6F6] focus:outline-none" onclick="toggleFaq(3)">
+                            <span class="font-semibold text-gray-900 text-sm sm:text-base md:text-lg">O conteúdo é atualizado?</span>
+                            <div id="faq-icon-bg-3" class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl flex items-center justify-center transition-colors bg-[#F6F6F6] text-gray-500 shrink-0 ml-4">
+                                <i id="faq-icon-3" class="ph ph-plus text-base sm:text-lg"></i>
                             </div>
                         </button>
-                        <div id="faq-content-3" class="hidden px-5 py-4 md:px-6 md:py-5 bg-white text-gray-600 border-t border-gray-100">
-                            <p class="leading-relaxed text-sm md:text-base">Sim, além das aulas gravadas, temos encontros semanais ao vivo para analisar o mercado atual e fazer recomendações.</p>
+                        <div id="faq-content-3" class="hidden px-4 sm:px-5 py-4 md:px-6 md:py-5 bg-white text-gray-600 border-t border-gray-100">
+                            <p class="leading-relaxed text-xs sm:text-sm md:text-base">Sim, além das aulas gravadas, temos encontros semanais ao vivo para analisar o mercado atual e fazer recomendações.</p>
                         </div>
                     </div>
 
-                    <!-- FAQ Item 4 -->
                     <div class="border border-gray-200 rounded-xl overflow-hidden transition-all duration-200 bg-white shadow-sm">
-                        <button class="w-full px-5 py-4 md:px-6 md:py-5 text-left flex justify-between items-center bg-white hover:bg-[#F6F6F6] focus:outline-none" onclick="toggleFaq(4)">
-                            <span class="font-semibold text-gray-900 text-base md:text-lg">Existe suporte para dúvidas?</span>
-                            <div id="faq-icon-bg-4" class="w-8 h-8 rounded-xl flex items-center justify-center transition-colors bg-[#F6F6F6] text-gray-500 shrink-0 ml-4">
-                                <i id="faq-icon-4" class="ph ph-plus text-lg"></i>
+                        <button class="w-full px-4 sm:px-5 py-4 md:px-6 md:py-5 text-left flex justify-between items-center bg-white hover:bg-[#F6F6F6] focus:outline-none" onclick="toggleFaq(4)">
+                            <span class="font-semibold text-gray-900 text-sm sm:text-base md:text-lg">Existe suporte para dúvidas?</span>
+                            <div id="faq-icon-bg-4" class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl flex items-center justify-center transition-colors bg-[#F6F6F6] text-gray-500 shrink-0 ml-4">
+                                <i id="faq-icon-4" class="ph ph-plus text-base sm:text-lg"></i>
                             </div>
                         </button>
-                        <div id="faq-content-4" class="hidden px-5 py-4 md:px-6 md:py-5 bg-white text-gray-600 border-t border-gray-100">
-                            <p class="leading-relaxed text-sm md:text-base">Sim, você terá suporte direto da nossa equipe e poderá tirar dúvidas nas lives semanais.</p>
+                        <div id="faq-content-4" class="hidden px-4 sm:px-5 py-4 md:px-6 md:py-5 bg-white text-gray-600 border-t border-gray-100">
+                            <p class="leading-relaxed text-xs sm:text-sm md:text-base">Sim, você terá suporte direto da nossa equipe e poderá tirar dúvidas nas lives semanais.</p>
                         </div>
                     </div>
 
@@ -451,38 +463,38 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black pt-16 pb-8 md:pt-20 md:pb-10 border-t border-gray-800">
+    <footer class="bg-black pt-16 pb-24 md:pt-20 md:pb-10 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-5 md:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-12 md:mb-16">
                 
                 <!-- Coluna 1 -->
-                <div class="col-span-1 lg:col-span-1">
-                    <div class="mb-8">
-                        <img src="https://raw.githubusercontent.com/design-auvp/agro/main/AUVP%20AGRO%20-%20HORIZONTAL%20BRANCA.svg" alt="AUVP Agro" class="h-12 md:h-16 w-auto">
+                <div class="col-span-1 lg:col-span-1 text-center md:text-left">
+                    <div class="mb-6 md:mb-8 flex justify-center md:justify-start">
+                        <img src="https://raw.githubusercontent.com/design-auvp/agro/main/AUVP%20AGRO%20-%20HORIZONTAL%20BRANCA.svg" alt="AUVP Agro" class="h-10 sm:h-12 md:h-16 w-auto">
                     </div>
-                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+                    <p class="text-xs sm:text-sm text-gray-400 mb-4 sm:mb-6 leading-relaxed">
                         AUVP CONSULTORIA FINANCEIRA DE INVESTIMENTOS LTDA
                     </p>
-                    <p class="text-sm text-gray-400 leading-relaxed">
+                    <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
                         CNPJ: 49.479.036/0001-99
                     </p>
                 </div>
 
                 <!-- Coluna 2 -->
-                <div>
-                    <h4 class="text-white font-bold mb-6 text-base tracking-wide">Plataforma</h4>
-                    <ul class="space-y-4 text-gray-400">
+                <div class="text-center md:text-left">
+                    <h4 class="text-white font-bold mb-4 md:mb-6 text-sm sm:text-base tracking-wide">Plataforma</h4>
+                    <ul class="space-y-3 sm:space-y-4 text-gray-400 text-sm sm:text-base">
                         <li><a href="https://auvpagro.com.br/cotacoes" target="_blank" class="hover:text-white transition-colors">Cotações</a></li>
                         <li><a href="https://auvpagro.com.br/analises" target="_blank" class="hover:text-white transition-colors">Análises</a></li>
                         <li><a href="https://auvpagro.com.br/panorama" target="_blank" class="hover:text-white transition-colors">Boletim Agro</a></li>
-                        <li><a href="https://auvpagro.com.br/politica-de-privacidade" target="_blank" class="hover:text-white transition-colors">Politica de Privacidade</a></li>
+                        <li><a href="https://auvpagro.com.br/politica-de-privacidade" target="_blank" class="hover:text-white transition-colors">Política de Privacidade</a></li>
                     </ul>
                 </div>
 
                 <!-- Coluna 3 -->
-                <div>
-                    <h4 class="text-white font-bold mb-6 text-base tracking-wide">Nossos Canais</h4>
-                    <ul class="space-y-4 text-gray-400">
+                <div class="text-center md:text-left">
+                    <h4 class="text-white font-bold mb-4 md:mb-6 text-sm sm:text-base tracking-wide">Nossos Canais</h4>
+                    <ul class="space-y-3 sm:space-y-4 text-gray-400 text-sm sm:text-base">
                         <li><a href="https://www.youtube.com/@AUVPagro" target="_blank" class="hover:text-white transition-colors">YouTube</a></li>
                         <li><a href="https://www.instagram.com/auvpagro/#" target="_blank" class="hover:text-white transition-colors">Instagram</a></li>
                         <li><a href="https://comunidade.auvp.com.br/" target="_blank" class="hover:text-white transition-colors">Comunidade</a></li>
@@ -490,9 +502,9 @@
                 </div>
 
                 <!-- Coluna 4 -->
-                <div>
-                    <h4 class="text-white font-bold mb-6 text-base tracking-wide">Outros Produtos</h4>
-                    <ul class="space-y-4 text-gray-400">
+                <div class="text-center md:text-left">
+                    <h4 class="text-white font-bold mb-4 md:mb-6 text-sm sm:text-base tracking-wide">Outros Produtos</h4>
+                    <ul class="space-y-3 sm:space-y-4 text-gray-400 text-sm sm:text-base">
                         <li><a href="https://auvpcapital.com.br/" target="_blank" class="hover:text-white transition-colors">AUVP Capital</a></li>
                         <li><a href="https://www.auvp.com.br/" target="_blank" class="hover:text-white transition-colors">AUVP Escola</a></li>
                         <li><a href="https://analitica.auvp.com.br/" target="_blank" class="hover:text-white transition-colors">AUVP Analítica</a></li>
@@ -504,7 +516,7 @@
             </div>
             
             <div class="pt-8 border-t border-gray-800 flex justify-center items-center">
-                <div class="text-sm text-gray-500">
+                <div class="text-xs sm:text-sm text-gray-500">
                     © 2026 Todos os direitos reservados.
                 </div>
             </div>
@@ -518,11 +530,10 @@
         </a>
     </div>
 
-    <!-- Lógica JavaScript para Menu, FAQ e Contador -->
+    <!-- Lógica JavaScript Principal -->
     <script>
         // --- Lógica do Contador Regressivo ---
         function getNextLiveDate() {
-            // Define o alvo para a próxima quarta-feira às 19:00 (Horário de Brasília / UTC-3)
             // 19:00 BRT equivale a 22:00 UTC
             const now = new Date();
             const targetDate = new Date(now);
@@ -531,7 +542,6 @@
             // 0 = Domingo, 1 = Segunda, 2 = Terça, 3 = Quarta (Wed)
             let daysUntilWednesday = (3 - targetDate.getUTCDay() + 7) % 7;
             
-            // Se hoje for quarta-feira mas já passou das 19:00 BRT (22:00 UTC), o alvo é a próxima quarta
             if (daysUntilWednesday === 0 && now.getTime() > targetDate.getTime()) {
                 daysUntilWednesday = 7;
             }
@@ -552,7 +562,6 @@
                 document.getElementById("cd-minutes").textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, "0");
                 document.getElementById("cd-seconds").textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, "0");
             } else {
-                // Se o tempo acabar, zera o contador
                 document.getElementById("cd-days").textContent = "00";
                 document.getElementById("cd-hours").textContent = "00";
                 document.getElementById("cd-minutes").textContent = "00";
@@ -561,7 +570,7 @@
         }
 
         setInterval(updateCountdown, 1000);
-        updateCountdown(); // Chamada inicial para evitar delay de 1 segundo
+        updateCountdown();
 
         // --- Lógica do Menu (Navbar) ---
         const nav = document.getElementById('navbar');
@@ -573,24 +582,21 @@
 
         let isMobileMenuOpen = false;
 
-        // Toggle do Menu Mobile
         mobileMenuBtn.addEventListener('click', () => {
             isMobileMenuOpen = !isMobileMenuOpen;
             if (isMobileMenuOpen) {
                 mobileMenu.classList.remove('hidden');
                 mobileMenuBtn.classList.replace('ph-list', 'ph-x');
-                // Força o fundo branco na nav
                 nav.className = "fixed w-full z-50 transition-all duration-300 bg-white shadow-md py-3 md:py-4";
                 logoImg.src = "https://raw.githubusercontent.com/design-auvp/agro/main/AUVP%20AGRO%20-%20HORIZONTAL%20PRETA.svg";
                 mobileMenuBtn.className = "ph ph-x text-3xl text-gray-900 cursor-pointer p-2";
             } else {
                 mobileMenu.classList.add('hidden');
                 mobileMenuBtn.classList.replace('ph-x', 'ph-list');
-                updateNavbar(); // Restaura consoante a posição do scroll
+                updateNavbar();
             }
         });
 
-        // Fechar menu mobile ao clicar num link
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -602,10 +608,9 @@
         });
 
         function updateNavbar() {
-            if (isMobileMenuOpen) return; // Não atualiza propriedades se o menu estiver aberto
+            if (isMobileMenuOpen) return;
 
             if (window.scrollY > 50) {
-                // Scrolled states
                 nav.className = "fixed w-full z-50 transition-all duration-300 bg-white shadow-md py-3 md:py-4";
                 logoImg.src = "https://raw.githubusercontent.com/design-auvp/agro/main/AUVP%20AGRO%20-%20HORIZONTAL%20PRETA.svg";
                 
@@ -617,7 +622,6 @@
                 btnAluno.className = "inline-flex items-center justify-center px-4 lg:px-6 py-3 font-semibold rounded-none transition-all duration-200 ease-in-out cursor-pointer bg-[#215a3f] text-white border-2 border-[#215a3f] hover:bg-transparent hover:text-[#215a3f] text-sm lg:text-base group";
                 mobileMenuBtn.className = "ph ph-list text-3xl text-gray-900 cursor-pointer p-2";
             } else {
-                // Transparent/Top states
                 nav.className = "fixed w-full z-50 transition-all duration-300 bg-transparent py-4 md:py-5";
                 logoImg.src = "https://raw.githubusercontent.com/design-auvp/agro/main/AUVP%20AGRO%20-%20HORIZONTAL%20BRANCA.svg";
                 
@@ -632,13 +636,12 @@
         }
         
         window.addEventListener('scroll', updateNavbar);
-        updateNavbar(); // Executar uma vez no carregamento para checar a posição atual
+        updateNavbar();
 
         // --- Lógica do FAQ ---
         let currentOpenFaq = null;
 
         function toggleFaq(index) {
-            // Fechar todos
             for(let i = 0; i <= 4; i++) {
                 const content = document.getElementById(`faq-content-${i}`);
                 const icon = document.getElementById(`faq-icon-${i}`);
@@ -653,7 +656,6 @@
                 }
             }
 
-            // Se o clicado não era o que estava aberto, abre-o
             if (currentOpenFaq !== index) {
                 const content = document.getElementById(`faq-content-${index}`);
                 const icon = document.getElementById(`faq-icon-${index}`);
@@ -667,9 +669,65 @@
                 
                 currentOpenFaq = index;
             } else {
-                currentOpenFaq = null; // Fechou o que estava aberto
+                currentOpenFaq = null;
             }
         }
+        
+        // --- Sistema de Captura de UTMs ---
+        (function() {
+            function captureUTMs() {
+                const params = new URLSearchParams(window.location.search);
+                const utms = {};
+                const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'src', 'sck'];
+                let hasUtms = false;
+                
+                keys.forEach(key => {
+                    if (params.has(key)) {
+                        utms[key] = params.get(key);
+                        hasUtms = true;
+                    }
+                });
+                
+                // Grava na sessão para manter as UTMs enquanto o utilizador navega pelo site
+                if (hasUtms) {
+                    sessionStorage.setItem('auvp_utms', JSON.stringify(utms));
+                    return utms;
+                }
+                
+                // Se não vier na URL agora, tenta recuperar do histórico de navegação (sessionStorage)
+                const stored = sessionStorage.getItem('auvp_utms');
+                return stored ? JSON.parse(stored) : {};
+            }
+
+            function appendUTMsToConversionLinks(utms) {
+                if (Object.keys(utms).length === 0) return;
+                
+                // Segmenta apenas os links importantes de conversão para não sujar links internos
+                const links = document.querySelectorAll('a[href*="form.auvp.com.br"], a[href*="auvpagro.com.br/alunos"], a[href*="wa.me"]');
+                
+                links.forEach(link => {
+                    try {
+                        const url = new URL(link.href);
+                        Object.keys(utms).forEach(key => {
+                            // Se já existir, sobrescreve para garantir a UTM mais recente
+                            url.searchParams.set(key, utms[key]);
+                        });
+                        link.href = url.toString();
+                    } catch (e) {
+                        console.warn("URL inválida ao tentar injetar UTMs:", link.href);
+                    }
+                });
+            }
+
+            const activeUtms = captureUTMs();
+            
+            // Injeta as UTMs assim que o DOM estiver pronto
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => appendUTMsToConversionLinks(activeUtms));
+            } else {
+                appendUTMsToConversionLinks(activeUtms);
+            }
+        })();
     </script>
 </body>
 </html>
