@@ -463,76 +463,54 @@
     <!-- FAQ Section -->
     <section id="faq" class="py-16 md:py-24 bg-[#F6F6F6]">
         <div class="max-w-3xl mx-auto px-5 md:px-8">
-            <div class="mb-12 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-                    Dúvidas básicas
-                </h2>
-            </div>
-            
-            <div class="space-y-4">
-                <!-- FAQ Item 1 -->
-                <div class="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all duration-200 faq-item">
-                    <button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none faq-button">
-                        <span class="font-semibold text-gray-900 text-lg">Quanto tempo duram as aulas?</span>
-                        <div class="w-8 h-8 rounded-full flex items-center justify-center transition-colors bg-gray-100 text-gray-500 icon-bg">
-                            <i class="ph ph-plus text-lg icon"></i>
-                        </div>
-                    </button>
-                    <div class="px-6 pb-5 text-gray-600 hidden faq-content">
-                        <p class="leading-relaxed border-t border-gray-100 pt-4 mt-1">As aulas são objetivas, com média de 10 minutos, focadas no que realmente importa para o seu resultado.</p>
-                    </div>
-                </div>
+            <div class="bg-white p-8 md:p-12 rounded-xl shadow">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">Dúvidas Frequentes</h2>
+                
+                <div class="space-y-6">
+                    <!-- FAQ Item 1 -->
+                    <details class="group border-b border-gray-200 pb-4" open>
+                        <summary class="font-semibold text-xl text-gray-900 cursor-pointer list-none flex justify-between items-center [&::-webkit-details-marker]:hidden">
+                            Quanto tempo duram as aulas?
+                            <i class="ph ph-caret-down text-gray-400 group-open:rotate-180 transition-transform"></i>
+                        </summary>
+                        <p class="text-gray-500 mt-3 leading-relaxed">As aulas são objetivas, com média de 10 minutos, focadas no que realmente importa para o seu resultado.</p>
+                    </details>
 
-                <!-- FAQ Item 2 -->
-                <div class="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all duration-200 faq-item">
-                    <button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none faq-button">
-                        <span class="font-semibold text-gray-900 text-lg">As aulas são online?</span>
-                        <div class="w-8 h-8 rounded-full flex items-center justify-center transition-colors bg-gray-100 text-gray-500 icon-bg">
-                            <i class="ph ph-plus text-lg icon"></i>
-                        </div>
-                    </button>
-                    <div class="px-6 pb-5 text-gray-600 hidden faq-content">
-                        <p class="leading-relaxed border-t border-gray-100 pt-4 mt-1">Sim, todo o treinamento e as ferramentas são acessados de forma 100% online pela nossa plataforma.</p>
-                    </div>
-                </div>
+                    <!-- FAQ Item 2 -->
+                    <details class="group border-b border-gray-200 pb-4">
+                        <summary class="font-semibold text-xl text-gray-900 cursor-pointer list-none flex justify-between items-center [&::-webkit-details-marker]:hidden">
+                            As aulas são online?
+                            <i class="ph ph-caret-down text-gray-400 group-open:rotate-180 transition-transform"></i>
+                        </summary>
+                        <p class="text-gray-500 mt-3 leading-relaxed">Sim, todo o treinamento e as ferramentas são acessados de forma 100% online pela nossa plataforma.</p>
+                    </details>
 
-                <!-- FAQ Item 3 -->
-                <div class="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all duration-200 faq-item">
-                    <button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none faq-button">
-                        <span class="font-semibold text-gray-900 text-lg">Eu não entendo de finanças, vou conseguir aprender?</span>
-                        <div class="w-8 h-8 rounded-full flex items-center justify-center transition-colors bg-gray-100 text-gray-500 icon-bg">
-                            <i class="ph ph-plus text-lg icon"></i>
-                        </div>
-                    </button>
-                    <div class="px-6 pb-5 text-gray-600 hidden faq-content">
-                        <p class="leading-relaxed border-t border-gray-100 pt-4 mt-1">Com certeza. O curso foi desenhado do zero para quem nunca operou no mercado financeiro, trazendo a expertise da AUVP Capital de forma simplificada.</p>
-                    </div>
-                </div>
+                    <!-- FAQ Item 3 -->
+                    <details class="group border-b border-gray-200 pb-4">
+                        <summary class="font-semibold text-xl text-gray-900 cursor-pointer list-none flex justify-between items-center [&::-webkit-details-marker]:hidden">
+                            Eu não entendo de finanças, vou conseguir aprender?
+                            <i class="ph ph-caret-down text-gray-400 group-open:rotate-180 transition-transform"></i>
+                        </summary>
+                        <p class="text-gray-500 mt-3 leading-relaxed">Com certeza. O curso foi desenhado do zero para quem nunca operou no mercado financeiro, trazendo a expertise da AUVP Capital de forma simplificada.</p>
+                    </details>
 
-                <!-- FAQ Item 4 -->
-                <div class="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all duration-200 faq-item">
-                    <button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none faq-button">
-                        <span class="font-semibold text-gray-900 text-lg">O conteúdo é atualizado?</span>
-                        <div class="w-8 h-8 rounded-full flex items-center justify-center transition-colors bg-gray-100 text-gray-500 icon-bg">
-                            <i class="ph ph-plus text-lg icon"></i>
-                        </div>
-                    </button>
-                    <div class="px-6 pb-5 text-gray-600 hidden faq-content">
-                        <p class="leading-relaxed border-t border-gray-100 pt-4 mt-1">Sim, além das aulas gravadas, temos encontros semanais ao vivo para analisar o mercado atual e fazer recomendações.</p>
-                    </div>
-                </div>
+                    <!-- FAQ Item 4 -->
+                    <details class="group border-b border-gray-200 pb-4">
+                        <summary class="font-semibold text-xl text-gray-900 cursor-pointer list-none flex justify-between items-center [&::-webkit-details-marker]:hidden">
+                            O conteúdo é atualizado?
+                            <i class="ph ph-caret-down text-gray-400 group-open:rotate-180 transition-transform"></i>
+                        </summary>
+                        <p class="text-gray-500 mt-3 leading-relaxed">Sim, além das aulas gravadas, temos encontros semanais ao vivo para analisar o mercado atual e fazer recomendações.</p>
+                    </details>
 
-                <!-- FAQ Item 5 -->
-                <div class="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all duration-200 faq-item">
-                    <button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none faq-button">
-                        <span class="font-semibold text-gray-900 text-lg">Existe suporte para dúvidas?</span>
-                        <div class="w-8 h-8 rounded-full flex items-center justify-center transition-colors bg-gray-100 text-gray-500 icon-bg">
-                            <i class="ph ph-plus text-lg icon"></i>
-                        </div>
-                    </button>
-                    <div class="px-6 pb-5 text-gray-600 hidden faq-content">
-                        <p class="leading-relaxed border-t border-gray-100 pt-4 mt-1">Sim, você terá suporte direto da nossa equipe e poderá tirar dúvidas nas lives semanais.</p>
-                    </div>
+                    <!-- FAQ Item 5 -->
+                    <details class="group border-b border-gray-200 pb-4">
+                        <summary class="font-semibold text-xl text-gray-900 cursor-pointer list-none flex justify-between items-center [&::-webkit-details-marker]:hidden">
+                            Existe suporte para dúvidas?
+                            <i class="ph ph-caret-down text-gray-400 group-open:rotate-180 transition-transform"></i>
+                        </summary>
+                        <p class="text-gray-500 mt-3 leading-relaxed">Sim, você terá suporte direto da nossa equipe e poderá tirar dúvidas nas lives semanais.</p>
+                    </details>
                 </div>
             </div>
         </div>
@@ -624,8 +602,8 @@
                     link.classList.add('text-gray-700');
                 });
 
-                alunoBtn.classList.remove('bg-white/10', 'text-white', 'border-transparent', 'hover:border-white');
-                alunoBtn.classList.add('bg-auvp-base', 'text-white', 'hover:bg-auvp-hover');
+                alunoBtn.classList.remove('bg-white/10', 'border-transparent', 'hover:border-white');
+                alunoBtn.classList.add('bg-auvp-base', 'hover:bg-auvp-hover');
             } else {
                 navbar.classList.add('bg-transparent', 'py-5');
                 navbar.classList.remove('bg-white', 'shadow-md', 'py-3');
@@ -638,8 +616,8 @@
                     link.classList.remove('text-gray-700');
                 });
 
-                alunoBtn.classList.add('bg-white/10', 'text-white', 'border-transparent', 'hover:border-white');
-                alunoBtn.classList.remove('bg-auvp-base', 'text-white', 'hover:bg-auvp-hover');
+                alunoBtn.classList.add('bg-white/10', 'border-transparent', 'hover:border-white');
+                alunoBtn.classList.remove('bg-auvp-base', 'hover:bg-auvp-hover');
             }
         });
 
@@ -669,33 +647,6 @@
 
         mobileMenuBtn.addEventListener('click', toggleMenu);
         mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
-
-        // FAQ Toggle
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
-            const button = item.querySelector('.faq-button');
-            const content = item.querySelector('.faq-content');
-            const iconBg = item.querySelector('.icon-bg');
-            const icon = item.querySelector('.icon');
-
-            button.addEventListener('click', () => {
-                const isOpen = !content.classList.contains('hidden');
-                
-                faqItems.forEach(otherItem => {
-                    otherItem.querySelector('.faq-content').classList.add('hidden');
-                    otherItem.querySelector('.icon-bg').classList.remove('bg-auvp-base', 'text-white');
-                    otherItem.querySelector('.icon-bg').classList.add('bg-gray-100', 'text-gray-500');
-                    otherItem.querySelector('.icon').classList.replace('ph-minus', 'ph-plus');
-                });
-
-                if (!isOpen) {
-                    content.classList.remove('hidden');
-                    iconBg.classList.remove('bg-gray-100', 'text-gray-500');
-                    iconBg.classList.add('bg-auvp-base', 'text-white');
-                    icon.classList.replace('ph-plus', 'ph-minus');
-                }
-            });
-        });
 
         // Contador Regressivo Lógica (Próxima Quarta-feira às 19:00 BRT -> 22:00 UTC)
         function getNextWednesday19hBRT() {
